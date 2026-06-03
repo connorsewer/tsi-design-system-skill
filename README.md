@@ -52,4 +52,7 @@ python3 scripts/validate_package.py .
 
 ## License
 
-Proprietary. All rights reserved by Transworld Systems Inc. See `NOTICE.md`.
+Code and documentation are released under the [MIT License](LICENSE). The bundled
+TSI brand assets (name, logos, sub-brand marks, Brand Identity Guide, and people
+photography) are trademarks and proprietary assets of Transworld Systems Inc. and
+are **not** covered by MIT. See [`NOTICE.md`](NOTICE.md) for the full breakdown.
