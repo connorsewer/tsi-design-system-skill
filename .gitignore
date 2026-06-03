@@ -1,0 +1,21 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+
+# editor / tooling
+.vscode/
+.idea/
+*.swp
+*~
+
+# python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# scratch / local-only
+_v1_backup/
+*.local

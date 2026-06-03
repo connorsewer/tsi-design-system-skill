@@ -1,0 +1,13 @@
+{
+  "id": "tsi-v2-02",
+  "title": "Warm compliance and care editorial field",
+  "file": "tsi-v2-02-warm-compliance-care.png",
+  "prompt": "Create a 16:9 warm editorial enterprise visual for TSI compliance-and-care storytelling. Light warm paper foundation, subtle stone neutrals, TSI dark blue #001E41 typography zones and TSI bright blue #4396F6 linework. Abstract regulated workflow field with gentle arcs, document silhouettes, customer-care touchpoints, and validation marks. Premium, subtle, calm, sophisticated, print-informed. Leave clean logo-safe space upper left and text-safe space on the left third. No logos, no readable text, no fake records, no client/account/patient/borrower data, no distressed people, no legal-threat imagery, no watermarks.",
+  "generation_mode": "built-in Codex image generation",
+  "source_path": "/Users/connorlaughlin/.codex/generated_images/019e8e4d-59a1-75e1-9b90-7d506af6e7c6/ig_0428551b734e4f0c016a206098d490819b98ff4f3d39e59b9c.png",
+  "review_status": "directional-example",
+  "notes": "Shows how warm editorial neutrals can support TSI blue anchors.",
+  "package_asset_policy": "full-resolution PNG omitted from compact package; use bundled WebP preview for visual reference and regenerate from prompt metadata for production use.",
+  "preview_path": "previews/tsi-v2-02-warm-compliance-care-preview.webp",
+  "source_png_not_bundled": true
+}

@@ -1,0 +1,13 @@
+{
+  "id": "tsi-v2-04",
+  "title": "Borrower servicing journey map",
+  "file": "tsi-v2-04-borrower-servicing-journey.png",
+  "prompt": "Create a 16:9 light premium borrower servicing journey map visual for TSI Loan Servicing / UAS-inspired storytelling, without using any product logos. Mostly white surface with cool blue tint panels, TSI dark blue #001E41 path structure, TSI bright blue #4396F6 active journey line, small green completion indicators, and restrained orange exception notes. Show abstract borrower journey stages as generic icons/cards, no readable personal data, no account numbers. Elegant, spacious, premium, modern, suitable for a web hero or deck slide. Leave upper-left logo-safe space. No logos, no fake data, no names, no watermarks, no distressed people.",
+  "generation_mode": "built-in Codex image generation",
+  "source_path": "/Users/connorlaughlin/.codex/generated_images/019e8e4d-59a1-75e1-9b90-7d506af6e7c6/ig_0428551b734e4f0c016a20615a8fb4819ba6b1bb1bd1f56ec1.png",
+  "review_status": "directional-example",
+  "notes": "Contains generic generated labels; production text should be rebuilt outside the image when precision matters.",
+  "package_asset_policy": "full-resolution PNG omitted from compact package; use bundled WebP preview for visual reference and regenerate from prompt metadata for production use.",
+  "preview_path": "previews/tsi-v2-04-borrower-servicing-journey-preview.webp",
+  "source_png_not_bundled": true
+}

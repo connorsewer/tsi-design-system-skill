@@ -1,0 +1,13 @@
+{
+  "id": "tsi-v2-05",
+  "title": "Healthcare RCM denial recovery flow",
+  "file": "tsi-v2-05-healthcare-rcm-flow.png",
+  "prompt": "Create a 16:9 light premium healthcare revenue cycle denial recovery assembly flow. White and cool blue-white foundation, TSI dark blue #001E41 process structure, TSI bright blue #4396F6 active flow, green verified checkpoints, orange exception markers. Show abstract claim tokens moving through extraction, scoring, review, submission, and learning loop as clean geometric stages. Use sparse generic labels only if needed, no patient information, no medical records, no hospital names. Sophisticated enterprise product visual, subtle depth, elegant, non-threatening. Leave upper-left logo-safe area. No logos, no fake patient/client/account data, no distressed patients, no watermarks.",
+  "generation_mode": "built-in Codex image generation",
+  "source_path": "/Users/connorlaughlin/.codex/generated_images/019e8e4d-59a1-75e1-9b90-7d506af6e7c6/ig_0428551b734e4f0c016a2061984fac819b82961f23a60917f4.png",
+  "review_status": "directional-example",
+  "notes": "Healthcare process example; review generated labels before production use.",
+  "package_asset_policy": "full-resolution PNG omitted from compact package; use bundled WebP preview for visual reference and regenerate from prompt metadata for production use.",
+  "preview_path": "previews/tsi-v2-05-healthcare-rcm-flow-preview.webp",
+  "source_png_not_bundled": true
+}

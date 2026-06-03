@@ -1,0 +1,13 @@
+{
+  "id": "tsi-v2-08",
+  "title": "Compliant omnichannel outreach spot asset",
+  "file": "tsi-v2-08-compliant-outreach-spot.png",
+  "prompt": "Create a square 1:1 premium spot icon for compliant omnichannel outreach in the TSI 2.0 visual system. Transparent or very light background. Abstract envelope, message path, consent/validation check, and channel nodes combined into one refined icon. TSI dark blue #001E41 primary linework, TSI bright blue #4396F6 accents, tiny green #66CC00 verification detail, minimal warm-neutral shadow. Crisp, elegant, modern, scalable, not cartoon, not emoji. No logos, no text, no fake data, no watermarks.",
+  "generation_mode": "built-in Codex image generation",
+  "source_path": "/Users/connorlaughlin/.codex/generated_images/019e8e4d-59a1-75e1-9b90-7d506af6e7c6/ig_0428551b734e4f0c016a206338dba4819b8acc724e879432f8.png",
+  "review_status": "directional-example",
+  "notes": "Small support asset for component sections and icon-led modules.",
+  "package_asset_policy": "full-resolution PNG omitted from compact package; use bundled WebP preview for visual reference and regenerate from prompt metadata for production use.",
+  "preview_path": "previews/tsi-v2-08-compliant-outreach-spot-preview.webp",
+  "source_png_not_bundled": true
+}

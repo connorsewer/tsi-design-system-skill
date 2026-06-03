@@ -1,0 +1,13 @@
+{
+  "id": "tsi-v2-07",
+  "title": "Relationship preservation human moment",
+  "file": "tsi-v2-07-relationship-preservation.png",
+  "prompt": "Create a 16:9 light premium abstract human relationship preservation visual for TSI. Elegant editorial illustration, not photorealistic stock photography. A calm professional service moment represented through semi-abstract silhouettes, customer communication paths, and trust signals on a white/warm-neutral foundation. TSI dark blue #001E41 linework, TSI bright blue #4396F6 highlights, soft blue tint shadows, very subtle gradient atmosphere. Professional, humane, respectful, modern, sophisticated. Leave upper-left logo-safe area and copy-safe space. No logos, no readable text, no distressed consumers, no debt-shame imagery, no medical or legal threats, no fake data, no watermarks.",
+  "generation_mode": "built-in Codex image generation",
+  "source_path": "/Users/connorlaughlin/.codex/generated_images/019e8e4d-59a1-75e1-9b90-7d506af6e7c6/ig_0428551b734e4f0c016a2062d00454819b90bec99eb658285e.png",
+  "review_status": "directional-example",
+  "notes": "Broader human visual lane; not a replacement for official people illustrations.",
+  "package_asset_policy": "full-resolution PNG omitted from compact package; use bundled WebP preview for visual reference and regenerate from prompt metadata for production use.",
+  "preview_path": "previews/tsi-v2-07-relationship-preservation-preview.webp",
+  "source_png_not_bundled": true
+}

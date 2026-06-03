@@ -1,0 +1,430 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TSI ARM | Route every account to the right next action</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,300;1,500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --dark: #001E41;
+      --bright: #4396F6;
+      --tint10: #ECF4FE;
+      --tint20: #DAE9FD;
+      --ink700: #1F3D6B;
+      --ink500: #5E7493;
+      --ink200: #D7DCE5;
+      --cool: #F7FAFF;
+      --warm: #F7F3EC;
+      --stone: #ECE4D8;
+      --green: #66CC00;
+      --orange: #FF8300;
+      --white: #fff;
+      --r-s: 6px;
+      --r-m: 10px;
+      --r-l: 16px;
+      --r-atmos: 24px;
+      --ease: cubic-bezier(.2, .7, .2, 1);
+      font-family: Poppins, "Segoe UI", Calibri, system-ui, sans-serif;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--dark);
+      background: var(--white);
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.5;
+    }
+    a { color: var(--ink700); }
+    .shell { max-width: 1200px; margin: 0 auto; padding: 0 32px; }
+
+    /* ---- Nav ---- */
+    .nav {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 24px; padding: 26px 0 18px;
+    }
+    .nav-left { display: flex; align-items: baseline; gap: 16px; }
+    .logo { height: 30px; width: auto; display: block; }
+    .nav-tag {
+      font-size: 12px; font-weight: 600; letter-spacing: .04em;
+      color: var(--ink500); border-left: 1px solid var(--ink200);
+      padding-left: 16px; align-self: center;
+    }
+    .nav-links { display: flex; gap: 28px; align-items: center; font-size: 14px; color: var(--ink700); }
+    .nav-links a { text-decoration: none; }
+    .nav-links a:hover { color: var(--dark); }
+    .nav-cta {
+      display: inline-flex; align-items: center; min-height: 42px;
+      padding: 0 18px; border-radius: var(--r-m); background: var(--bright);
+      color: var(--white); font-weight: 600; font-size: 14px; text-decoration: none;
+      box-shadow: 0 8px 22px rgba(67,150,246,.28);
+      transition: transform .18s var(--ease), box-shadow .18s var(--ease);
+    }
+    .nav-cta:hover { transform: translateY(-1px); box-shadow: 0 12px 30px rgba(67,150,246,.34); }
+    .nav-cta:focus-visible, .nav-links a:focus-visible, .hero-cta:focus-visible,
+    .close-cta:focus-visible { outline: 3px solid var(--bright); outline-offset: 3px; border-radius: var(--r-s); }
+
+    /* ---- Hero: asymmetric, left editorial ---- */
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.02fr) minmax(0, 0.98fr);
+      gap: 72px;
+      align-items: center;
+      padding: 60px 0 96px;
+      min-height: calc(100dvh - 80px);
+    }
+    .hero-eyebrow {
+      margin: 0 0 22px; font-size: 13px; font-weight: 600;
+      letter-spacing: .03em; color: var(--bright);
+    }
+    .hero-eyebrow em { font-style: italic; color: var(--ink700); font-weight: 500; }
+    h1 {
+      margin: 0; font-weight: 300; letter-spacing: -.025em;
+      font-size: clamp(40px, 5.4vw, 68px); line-height: 1.04;
+      color: var(--dark); max-width: 11.5ch;
+    }
+    h1 em { font-style: italic; font-weight: 300; }
+    .lead {
+      margin: 26px 0 0; max-width: 46ch;
+      font-size: 18px; line-height: 1.6; color: var(--ink700);
+    }
+    .hero-actions { margin-top: 38px; display: flex; align-items: center; gap: 22px; flex-wrap: wrap; }
+    .hero-cta {
+      display: inline-flex; align-items: center; gap: 10px;
+      min-height: 52px; padding: 0 30px; border-radius: var(--r-m);
+      background: var(--bright); color: var(--white);
+      font-weight: 600; font-size: 16px; text-decoration: none;
+      box-shadow: 0 14px 34px rgba(67,150,246,.32);
+      transition: transform .2s var(--ease), box-shadow .2s var(--ease);
+    }
+    .hero-cta:hover { transform: translateY(-2px); box-shadow: 0 20px 44px rgba(67,150,246,.4); }
+    .hero-cta svg { width: 16px; height: 16px; }
+    .hero-aside {
+      font-size: 14px; color: var(--ink500); line-height: 1.45; max-width: 22ch;
+      border-left: 2px solid var(--tint20); padding-left: 16px;
+    }
+
+    /* ---- Right column: account routing rail artifact ---- */
+    .artifact {
+      position: relative;
+      border-radius: var(--r-atmos);
+      padding: 28px;
+      background:
+        linear-gradient(180deg, rgba(247,250,255,.92), rgba(236,244,254,.78)),
+        var(--cool);
+      overflow: hidden;
+      box-shadow: 0 30px 80px rgba(0,30,65,.14);
+      border: 1px solid var(--ink200);
+    }
+    .artifact-bg {
+      position: absolute; inset: 0; z-index: 0;
+      width: 100%; height: 100%; object-fit: cover;
+      opacity: .12; mix-blend-mode: multiply; pointer-events: none;
+    }
+    .artifact-inner { position: relative; z-index: 1; }
+    .artifact-head {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 12px; margin-bottom: 22px;
+    }
+    .artifact-title { font-size: 14px; font-weight: 600; color: var(--dark); }
+    .artifact-sub { font-size: 12px; color: var(--ink500); margin-top: 3px; }
+    .live-pill {
+      display: inline-flex; align-items: center; gap: 7px;
+      padding: 5px 12px; border-radius: 999px;
+      background: rgba(102,204,0,.12); color: #3f7a00;
+      font-size: 11px; font-weight: 600; letter-spacing: .02em;
+    }
+    .live-dot {
+      width: 7px; height: 7px; border-radius: 999px; background: var(--green);
+      box-shadow: 0 0 0 0 rgba(102,204,0,.5);
+      animation: pulse 2.4s var(--ease) infinite;
+    }
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(102,204,0,.5); }
+      70% { box-shadow: 0 0 0 7px rgba(102,204,0,0); }
+      100% { box-shadow: 0 0 0 0 rgba(102,204,0,0); }
+    }
+
+    /* The rail: vertical stage list with a single blue fill */
+    .rail { position: relative; padding-left: 30px; }
+    .rail::before {
+      content: ""; position: absolute; left: 9px; top: 10px; bottom: 10px;
+      width: 2px; background: var(--ink200); border-radius: 2px;
+    }
+    .rail-fill {
+      content: ""; position: absolute; left: 9px; top: 10px;
+      width: 2px; border-radius: 2px; background: var(--bright);
+      height: 0;
+      animation: fill 1.4s var(--ease) .3s forwards;
+    }
+    @keyframes fill { to { height: 56%; } }
+    .stage {
+      position: relative; padding: 14px 0;
+      display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 12px;
+    }
+    .stage + .stage { border-top: 1px solid rgba(215,220,229,.6); }
+    .stage .node {
+      position: absolute; left: -28px; top: 50%; transform: translateY(-50%);
+      width: 16px; height: 16px; border-radius: 999px;
+      background: var(--white); border: 2px solid var(--ink200);
+    }
+    .stage.done .node { border-color: var(--bright); background: var(--bright); }
+    .stage.active .node {
+      border-color: var(--bright); background: var(--white);
+      box-shadow: 0 0 0 5px rgba(67,150,246,.18);
+    }
+    .stage-name { font-size: 15px; font-weight: 500; color: var(--ink700); }
+    .stage.active .stage-name { color: var(--dark); font-weight: 600; }
+    .stage.pending .stage-name { color: var(--ink500); }
+    .stage-meta { font-size: 12px; color: var(--ink500); margin-top: 3px; }
+    .stage-state {
+      font-size: 11px; font-weight: 600; letter-spacing: .02em;
+      padding: 4px 11px; border-radius: 999px; white-space: nowrap;
+    }
+    .st-done { background: var(--tint10); color: var(--ink700); }
+    .st-active {
+      background: rgba(67,150,246,.14); color: #2566b0;
+      opacity: 0; animation: settle .5s var(--ease) 1.5s forwards;
+    }
+    @keyframes settle { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: translateY(0); } }
+    .st-pending { background: rgba(94,116,147,.1); color: var(--ink500); }
+    .st-hold { background: rgba(255,131,0,.14); color: #9a5200; }
+
+    .artifact-foot {
+      margin-top: 22px; padding-top: 16px; border-top: 1px solid var(--ink200);
+      display: flex; align-items: center; justify-content: space-between; gap: 12px;
+      font-size: 12px; color: var(--ink500);
+    }
+    .artifact-foot strong { color: var(--ink700); font-weight: 600; }
+    .synthetic-note {
+      margin-top: 14px; font-size: 11px; color: var(--ink500); text-align: right;
+    }
+
+    /* ---- Supporting section: divided row list ---- */
+    .support {
+      background: var(--warm);
+      border-top: 1px solid var(--stone);
+      border-bottom: 1px solid var(--stone);
+    }
+    .support-inner { padding: 84px 0; display: grid; grid-template-columns: minmax(0,.85fr) minmax(0,1.15fr); gap: 64px; align-items: start; }
+    .support h2 { margin: 0; font-weight: 300; font-size: clamp(28px, 3.2vw, 40px); line-height: 1.12; letter-spacing: -.02em; color: var(--dark); max-width: 14ch; }
+    .support .support-lead { margin: 20px 0 0; font-size: 16px; line-height: 1.6; color: var(--ink700); max-width: 40ch; }
+    .rows { display: flex; flex-direction: column; }
+    .row {
+      display: grid; grid-template-columns: 132px 1fr; gap: 28px;
+      padding: 26px 0; border-top: 1px solid var(--stone); align-items: baseline;
+    }
+    .row:last-child { border-bottom: 1px solid var(--stone); }
+    .row-label { font-size: 14px; font-weight: 600; color: var(--bright); }
+    .row-body h3 { margin: 0 0 6px; font-size: 17px; font-weight: 600; color: var(--dark); }
+    .row-body p { margin: 0; font-size: 15px; line-height: 1.58; color: var(--ink700); max-width: 54ch; }
+
+    /* ---- Closing: editorial split, left mark + right line ---- */
+    .close { padding: 96px 0; background: var(--white); }
+    .close-inner {
+      display: grid; grid-template-columns: minmax(0,.7fr) minmax(0,1.3fr);
+      gap: 56px; align-items: center;
+    }
+    .close-mark { display: flex; flex-direction: column; gap: 18px; }
+    .close-logo { height: 34px; width: auto; }
+    .close-mark span { font-size: 13px; color: var(--ink500); line-height: 1.5; max-width: 28ch; }
+    .close-line { font-weight: 300; font-size: clamp(26px, 3.4vw, 42px); line-height: 1.14; letter-spacing: -.02em; color: var(--dark); margin: 0 0 28px; max-width: 18ch; }
+    .close-line em { font-style: italic; }
+    .close-cta {
+      display: inline-flex; align-items: center; gap: 10px;
+      min-height: 52px; padding: 0 30px; border-radius: var(--r-m);
+      background: var(--dark); color: var(--white);
+      font-weight: 600; font-size: 16px; text-decoration: none;
+      transition: transform .2s var(--ease), background .2s var(--ease);
+    }
+    .close-cta:hover { transform: translateY(-2px); background: #002a5c; }
+    .close-cta svg { width: 16px; height: 16px; }
+
+    .foot { border-top: 1px solid var(--ink200); }
+    .foot-inner { padding: 28px 0; display: flex; justify-content: space-between; gap: 18px; flex-wrap: wrap; font-size: 13px; color: var(--ink500); }
+
+    /* ---- Reveal motion ---- */
+    .reveal { opacity: 0; transform: translateY(14px); animation: reveal .7s var(--ease) forwards; }
+    .reveal.d1 { animation-delay: .05s; }
+    .reveal.d2 { animation-delay: .15s; }
+    @keyframes reveal { to { opacity: 1; transform: translateY(0); } }
+
+    /* ---- Responsive ---- */
+    @media (max-width: 900px) {
+      .shell { padding: 0 22px; }
+      .nav-links, .nav-tag { display: none; }
+      .hero {
+        grid-template-columns: 1fr; gap: 44px;
+        padding: 36px 0 64px; min-height: 0;
+      }
+      h1 { max-width: 100%; }
+      .support-inner, .close-inner { grid-template-columns: 1fr; gap: 36px; }
+      .row { grid-template-columns: 1fr; gap: 8px; }
+      .row-label { color: var(--bright); }
+    }
+    @media (max-width: 520px) {
+      .artifact { padding: 22px; }
+      .hero-actions { gap: 16px; }
+      .artifact-head { flex-direction: column; align-items: flex-start; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+      .reveal { opacity: 1; transform: none; }
+      .rail-fill { height: 56%; }
+      .st-active { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <header class="shell">
+    <nav class="nav" aria-label="Primary">
+      <div class="nav-left">
+        <img class="logo" src="../assets/official/logo-primary-on-white.png" alt="Transworld Systems Inc.">
+        <span class="nav-tag">Accounts Receivable Management</span>
+      </div>
+      <div class="nav-links">
+        <a href="#routing">Account routing</a>
+        <a href="#how">How it works</a>
+        <a href="#compliance">Compliance</a>
+      </div>
+      <a class="nav-cta" href="#talk">Request a review</a>
+    </nav>
+  </header>
+
+  <main class="shell">
+    <section class="hero" id="routing">
+      <div class="hero-copy reveal d1">
+        <p class="hero-eyebrow">For bank receivables teams, <em>recovery that respects the relationship</em></p>
+        <h1>Route every account to the <em>right</em> next action.</h1>
+        <p class="lead">TSI places each receivable on a governed path: intake, validation, compliant outreach, resolution. Bank teams see where every account sits and why, before it moves.</p>
+        <div class="hero-actions">
+          <a class="hero-cta" href="#talk">
+            Request a review
+            <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M1 8h13M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <p class="hero-aside">Built for ARM portfolios under bank examination and audit standards.</p>
+        </div>
+      </div>
+
+      <!-- Account routing rail artifact, synthetic illustrative state -->
+      <figure class="artifact reveal d2" aria-label="Illustrative account routing rail. One account moving through governed stages.">
+        <img class="artifact-bg" src="../assets/generated-v2/previews/tsi-v2-03-light-operating-layer-preview.webp" alt="" aria-hidden="true">
+        <div class="artifact-inner">
+          <div class="artifact-head">
+            <div>
+              <div class="artifact-title">Account routing rail</div>
+              <div class="artifact-sub">Account REF-4821 (illustrative) · portfolio batch 09</div>
+            </div>
+            <span class="live-pill"><span class="live-dot" aria-hidden="true"></span>Routing live</span>
+          </div>
+
+          <div class="rail">
+            <div class="rail-fill" aria-hidden="true"></div>
+
+            <div class="stage done">
+              <span class="node" aria-hidden="true"></span>
+              <div>
+                <div class="stage-name">Intake</div>
+                <div class="stage-meta">Account loaded, ownership and balance confirmed</div>
+              </div>
+              <span class="stage-state st-done">Cleared</span>
+            </div>
+
+            <div class="stage done">
+              <span class="node" aria-hidden="true"></span>
+              <div>
+                <div class="stage-name">Validate</div>
+                <div class="stage-meta">Identity, dispute history, and contact rules checked</div>
+              </div>
+              <span class="stage-state st-done">Cleared</span>
+            </div>
+
+            <div class="stage active">
+              <span class="node" aria-hidden="true"></span>
+              <div>
+                <div class="stage-name">Outreach</div>
+                <div class="stage-meta">Compliant contact window open, channel selected</div>
+              </div>
+              <span class="stage-state st-active">In progress</span>
+            </div>
+
+            <div class="stage pending">
+              <span class="node" aria-hidden="true"></span>
+              <div>
+                <div class="stage-name">Resolution</div>
+                <div class="stage-meta">Awaiting arrangement or documented outcome</div>
+              </div>
+              <span class="stage-state st-pending">Queued</span>
+            </div>
+          </div>
+
+          <div class="artifact-foot">
+            <span><strong>Hold gate:</strong> dispute flag pauses outreach automatically</span>
+            <span class="stage-state st-hold">Gate armed</span>
+          </div>
+        </div>
+        <figcaption class="synthetic-note">Synthetic illustrative data. Not a real account.</figcaption>
+      </figure>
+    </section>
+  </main>
+
+  <section class="support" id="how">
+    <div class="shell support-inner">
+      <div>
+        <h2>One governed path, not a black box.</h2>
+        <p class="support-lead">Each stage carries its own rules and its own evidence. Your team and your examiners read the same record.</p>
+      </div>
+      <div class="rows">
+        <div class="row">
+          <div class="row-label">Validate</div>
+          <div class="row-body">
+            <h3>Nothing moves before the checks pass</h3>
+            <p>Identity, balance, dispute history, and contact permissions are confirmed at intake. An account that fails a check holds in place with the reason attached, rather than advancing.</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="row-label">Outreach</div>
+          <div class="row-body">
+            <h3>Contact inside the rules that apply</h3>
+            <p>Channel, timing, and frequency follow the rule set for the account and the jurisdiction. The active window and the chosen channel are visible on the record, so a reviewer can see the why, not just the what.</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="row-label">Resolution</div>
+          <div class="row-body">
+            <h3>Every outcome is documented</h3>
+            <p>Arrangements, disputes, and closures write back to the account with a timestamp and an actor. Reporting reads from that same trail, so monthly results reconcile to individual account histories.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="close" id="talk">
+    <div class="shell close-inner">
+      <div class="close-mark">
+        <img class="close-logo" src="../assets/official/sub-arm-rgb.png" alt="TSI Accounts Receivable Management">
+        <span>Accounts Receivable Management for banks and credit unions, governed end to end.</span>
+      </div>
+      <div>
+        <p class="close-line">Walk one of your portfolios through the rail, with your <em>own</em> rules applied.</p>
+        <a class="close-cta" href="#talk">
+          Request a review
+          <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M1 8h13M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="foot">
+    <div class="shell foot-inner">
+      <span>Transworld Systems Inc. · Accounts Receivable Management</span>
+      <span>Illustrative example. Synthetic data only.</span>
+    </div>
+  </footer>
+</body>
+</html>

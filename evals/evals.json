@@ -1,0 +1,70 @@
+{
+  "skill_name": "tsi-design-system",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Use the TSI design system to create a light-premium landing page concept for TSI's cross-LOB revenue recovery platform. The result should be a portable HTML file with inline CSS, subtle brand-derived gradients, correct official logo use, synthetic proof points, and guidance for one generated hero image.",
+      "expected_output": "A single HTML landing page concept that uses TSI 2.0 light-premium styling, official assets, inline CSS, compliant synthetic data, and clear generated-image guidance.",
+      "files": [],
+      "expectations": [
+        "Output includes a single HTML file or complete HTML snippet with inline CSS.",
+        "Output uses official TSI logo guidance and does not generate or recreate the logo.",
+        "Output defaults to a light premium palette rather than a dark command-center look.",
+        "Output uses synthetic illustrative data only and avoids client/account/patient details.",
+        "Output includes a generated-image prompt or art direction that is not limited to the old duotone style."
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Use the TSI design system to create a motion-enabled 5-slide HTML mini deck for a TSI Loan Servicing/UAS story. It should reference the bundled PowerPoint template and brand guide context, use official logos correctly, include inline CSS/JS, and support reduced motion.",
+      "expected_output": "A portable HTML mini deck with inline CSS/JS, correct TSI logo handling, reduced-motion behavior, and a clear note about using the bundled PowerPoint template for PPTX work.",
+      "files": [],
+      "expectations": [
+        "Output mentions or uses the bundled PowerPoint template as the PPTX starting point.",
+        "Output includes reduced-motion handling for animation.",
+        "Output uses correct TSI or Loan Servicing branding without recreating logos.",
+        "Output includes a mechanism/proof slide, not only generic feature cards.",
+        "Output keeps sample metrics illustrative and synthetic."
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Use the TSI design system to design a premium product visual component for CollectX routing. It should feel modern and dynamic, use TSI brand anchors, include state-cycle motion, and avoid fake sensitive data.",
+      "expected_output": "A premium product-visual component or detailed implementation brief with TSI anchors, motion states, reduced-motion fallback, and synthetic operational labels.",
+      "files": [],
+      "expectations": [
+        "Output describes or implements a coherent product mechanism, not decorative UI.",
+        "Output includes reduced-motion behavior or fallback requirements.",
+        "Output uses TSI blue and Poppins as identity anchors.",
+        "Output avoids fake client, account, borrower, patient, or payment data.",
+        "Output uses refined depth/gradients without drifting into generic SaaS styling."
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "Use the TSI design system to write a GPT-image prompt book for five new TSI 2.0 assets: a light hero atmosphere, an editorial compliance visual, a product workflow artifact, a human relationship moment, and a spot icon. Do not overfit to the previous duotone sketch style or recent dark image batch.",
+      "expected_output": "A prompt-book style output with structured prompts, visual modes, constraints, metadata fields, and brand/legal guardrails.",
+      "files": [],
+      "expectations": [
+        "Output includes structured prompts with goal, visual mode, scene, subject, style, composition, and constraints.",
+        "Output explicitly prohibits generated logos and fake sensitive data.",
+        "Output covers multiple visual families rather than one house style.",
+        "Output keeps TSI color/type anchors while allowing light premium and editorial directions.",
+        "Output includes metadata or review fields for generated assets."
+      ]
+    },
+    {
+      "id": 5,
+      "prompt": "Use the TSI design system to advise on adding a TSI logo to a newly generated atmospheric background. Explain whether the logo should be generated into the image or composited afterward, recommend placements and logo variants, and provide the command workflow.",
+      "expected_output": "A clear recommendation to preserve the raw image, place official transparent PNG logos afterward, ask the user for placement approval, and use the bundled overlay script.",
+      "files": [],
+      "expectations": [
+        "Output recommends deterministic compositing instead of asking an image model to generate or redraw the logo.",
+        "Output recommends one or more placements and explains logo variant selection by background contrast.",
+        "Output asks for user approval before adding the logo.",
+        "Output references scripts/overlay_tsi_logo.py or an equivalent deterministic command workflow.",
+        "Output says to preserve the raw generated source and save branded derivatives separately."
+      ]
+    }
+  ]
+}

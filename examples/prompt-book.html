@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TSI 2.0 Prompt Book Example</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root { --dark:#001E41; --blue:#4396F6; --t10:#ECF4FE; --t20:#DAE9FD; --green:#66CC00; --orange:#FF8300; --ink:#1F3D6B; --muted:#5E7493; --line:#D7DCE5; --warm:#F7F3EC; --stone:#ECE4D8; --ease:cubic-bezier(.2,.7,.2,1); font-family:Poppins,Calibri,system-ui,sans-serif; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:linear-gradient(135deg,#fff 0%,#F7FAFF 50%,var(--warm) 100%); color:var(--dark); }
+    .wrap { max-width:1120px; margin:0 auto; padding:42px 24px 80px; }
+    header { display:grid; grid-template-columns:1fr auto; gap:28px; align-items:start; margin-bottom:34px; }
+    h1 { margin:0; font-size:clamp(42px,6vw,72px); line-height:1.02; letter-spacing:-.035em; font-weight:300; }
+    .lead { color:var(--ink); font-size:18px; line-height:1.6; max-width:720px; }
+    .badge { display:inline-flex; border:1px solid rgba(0,30,65,.12); border-radius:999px; padding:9px 12px; background:#fff; color:var(--muted); font:500 12px/1 "IBM Plex Mono",monospace; }
+    .grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px; }
+    article { background:rgba(255,255,255,.78); border:1px solid rgba(0,30,65,.1); border-radius:18px; box-shadow:0 18px 54px rgba(0,30,65,.08); overflow:hidden; }
+    .card-head { padding:22px 22px 0; display:flex; justify-content:space-between; gap:18px; align-items:start; }
+    h2 { margin:0; font-size:22px; line-height:1.2; font-weight:500; }
+    .mode { color:var(--blue); font:600 11px/1 "IBM Plex Mono",monospace; text-transform:uppercase; letter-spacing:.06em; }
+    pre { margin:18px 0 0; padding:22px; white-space:pre-wrap; color:#173556; background:linear-gradient(180deg,#fff,var(--t10)); border-top:1px solid rgba(0,30,65,.08); font:400 12px/1.56 "IBM Plex Mono",ui-monospace,monospace; }
+    .rules { margin-top:24px; display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; }
+    .rule { background:var(--dark); color:#fff; border-radius:16px; padding:20px; }
+    .rule b { display:block; margin-bottom:8px; }
+    .rule p { margin:0; color:rgba(255,255,255,.74); font-size:13px; line-height:1.45; }
+    button { border:0; border-radius:999px; background:var(--dark); color:#fff; padding:10px 14px; font:600 12px/1 Poppins; cursor:pointer; transition:transform .18s var(--ease); }
+    button:hover { transform:translateY(-1px); }
+    @media (max-width:850px) { header,.grid,.rules{grid-template-columns:1fr;} }
+    @media (prefers-reduced-motion: reduce) { *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important;} }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <header>
+      <div>
+        <span class="badge">Prompt-book example · TSI 2.0</span>
+        <h1>Generate new assets without trapping the system in one style.</h1>
+        <p class="lead">These prompts keep TSI blue, typography, and regulated-industry safety intact while allowing light premium, editorial, product-system, human, and spot-asset directions.</p>
+      </div>
+      <span class="badge">No generated logos · no sensitive data</span>
+    </header>
+    <section class="grid">
+      <article><div class="card-head"><h2>Light hero atmosphere</h2><button data-copy="p1">Copy</button></div><pre id="p1">Goal:
+Create a light premium hero atmosphere for a TSI revenue recovery platform page.
+
+Visual mode:
+Light premium system.
+
+Scene / structure:
+White and cool blue-white operating layer with subtle TSI-blue rails, translucent panels, and logo-safe upper-left space.
+
+Subject:
+Abstract revenue recovery workflow, not a fake dashboard.
+
+Style:
+Poppins-like precision, TSI dark blue #001E41, TSI bright blue #4396F6, subtle brand-derived gradients, refined depth.
+
+Composition:
+16:9, text-safe left third, visual detail on the right.
+
+Constraints:
+No generated logos, no fake records, no client/account/patient/borrower data, no generic SaaS blobs.</pre></article>
+      <article><div class="card-head"><h2>Editorial compliance visual</h2><button data-copy="p2">Copy</button></div><pre id="p2">Goal:
+Create a warm editorial visual for compliance-aware customer care.
+
+Visual mode:
+Warm editorial system.
+
+Scene / structure:
+Warm paper foundation with TSI-blue validation paths, soft document silhouettes, and customer-care touchpoints.
+
+Subject:
+Regulated workflow field, not legal-threat imagery.
+
+Style:
+Sophisticated, calm, print-informed, subtle gradients, Poppins-compatible label spaces.
+
+Composition:
+16:9, generous negative space, logo-safe upper left.
+
+Constraints:
+No logos, no fake documents, no distressed consumers, no shame or panic.</pre></article>
+      <article><div class="card-head"><h2>Product workflow artifact</h2><button data-copy="p3">Copy</button></div><pre id="p3">Goal:
+Create a product-system visual for routing, validation, and reporting.
+
+Visual mode:
+Product system artifact.
+
+Scene / structure:
+Clean modules connected by active rails, validation gates, exception paths, and synthetic state tokens.
+
+Subject:
+Operational mechanism for CollectX-style routing without product marks.
+
+Style:
+Light surface, refined glass, TSI blue signals, green verification, orange exceptions.
+
+Composition:
+16:9, crisp hierarchy, no tiny unreadable body copy.
+
+Constraints:
+No fake account names, no payment data, no logos, no real client details.</pre></article>
+      <article><div class="card-head"><h2>Human relationship moment</h2><button data-copy="p4">Copy</button></div><pre id="p4">Goal:
+Create a respectful human visual for customer relationship preservation.
+
+Visual mode:
+Light premium editorial illustration.
+
+Scene / structure:
+Semi-abstract professional service moment with trust signals and communication paths.
+
+Subject:
+Human care and continuity, not collections pressure.
+
+Style:
+TSI dark blue linework, bright blue highlights, warm/cool light foundation, subtle atmosphere.
+
+Composition:
+16:9, copy-safe area, official logo placed afterward.
+
+Constraints:
+No photorealistic stock people, no distressed consumers, no debt shame, no generated logos, no fake data.</pre></article>
+    </section>
+    <section class="rules">
+      <div class="rule"><b>Place marks after generation</b><p>Generate support visuals first. Add official logos from `assets/official/` afterward.</p></div>
+      <div class="rule"><b>Keep text reviewable</b><p>If labels matter, generate fewer labels and rebuild final text in HTML, slides, or design software.</p></div>
+      <div class="rule"><b>Document metadata</b><p>Save prompt, source path, generation mode, date, and review status for every asset.</p></div>
+    </section>
+  </main>
+  <script>
+    document.querySelectorAll('button[data-copy]').forEach((button) => {
+      button.addEventListener('click', async () => {
+        const target = document.getElementById(button.dataset.copy);
+        await navigator.clipboard.writeText(target.textContent.trim());
+        button.textContent = 'Copied';
+        setTimeout(() => button.textContent = 'Copy', 1200);
+      });
+    });
+  </script>
+</body>
+</html>

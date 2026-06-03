@@ -1,0 +1,13 @@
+{
+  "id": "tsi-v2-03",
+  "title": "Light operating layer with rails and gates",
+  "file": "tsi-v2-03-light-operating-layer.png",
+  "prompt": "Create a 16:9 light product operating-layer visual for TSI. Clean white and cool blue-white canvas with translucent panels, precise TSI dark blue #001E41 rails, TSI bright blue #4396F6 active paths, green #66CC00 verified checkpoints, and orange #FF8300 exception markers. Show abstract tokens moving through validation gates and routing lanes. Premium product-system artifact, subtle depth, crisp vector-like clarity, no dark command-center dominance. Leave upper-left logo-safe area. No logos, no readable body text, no fake client/account/patient/borrower data, no watermarks.",
+  "generation_mode": "built-in Codex image generation",
+  "source_path": "/Users/connorlaughlin/.codex/generated_images/019e8e4d-59a1-75e1-9b90-7d506af6e7c6/ig_0428551b734e4f0c016a2060c80098819bb44ee07771dedcf8.png",
+  "review_status": "directional-example",
+  "notes": "Product-system visual for mechanisms, gates, and active routing.",
+  "package_asset_policy": "full-resolution PNG omitted from compact package; use bundled WebP preview for visual reference and regenerate from prompt metadata for production use.",
+  "preview_path": "previews/tsi-v2-03-light-operating-layer-preview.webp",
+  "source_png_not_bundled": true
+}

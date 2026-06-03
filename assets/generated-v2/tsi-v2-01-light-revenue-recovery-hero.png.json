@@ -1,0 +1,13 @@
+{
+  "id": "tsi-v2-01",
+  "title": "Light revenue recovery hero atmosphere",
+  "file": "tsi-v2-01-light-revenue-recovery-hero.png",
+  "prompt": "Create a 16:9 light-premium enterprise hero atmosphere for Transworld Systems Inc. brand work. Abstract revenue recovery operating layer, mostly white and cool blue-white surfaces with subtle TSI dark blue #001E41 structure lines and TSI bright blue #4396F6 signal paths. Refined soft depth, translucent panels, precise Poppins-like label zones but no readable text. Leave clean logo-safe space in the upper left. Elegant, modern, sophisticated, subtle, executive, not a dark command center. No logos, no watermarks, no fake data, no client/account/patient/borrower information, no people, no generic SaaS blobs.",
+  "generation_mode": "built-in Codex image generation",
+  "source_path": "/Users/connorlaughlin/.codex/generated_images/019e8e4d-59a1-75e1-9b90-7d506af6e7c6/ig_0428551b734e4f0c016a2060426644819b91dc69f72bf08e25.png",
+  "review_status": "directional-example",
+  "notes": "Light-mode default atmosphere with logo-safe area; official logo should be placed afterward.",
+  "package_asset_policy": "full-resolution PNG omitted from compact package; use bundled WebP preview for visual reference and regenerate from prompt metadata for production use.",
+  "preview_path": "previews/tsi-v2-01-light-revenue-recovery-hero-preview.webp",
+  "source_png_not_bundled": true
+}

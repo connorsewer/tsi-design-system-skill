@@ -1,0 +1,13 @@
+{
+  "id": "tsi-v2-09",
+  "title": "Light premium data monument",
+  "file": "tsi-v2-09-light-data-monument.png",
+  "prompt": "Create a 16:9 light premium editorial data monument for TSI. Three large abstract numeric blocks as sculptural proof-point objects, but do not use exact readable digits if avoidable; make them feel like placeholder synthetic metrics. White and cool blue-white foundation with subtle warm editorial panels, TSI dark blue #001E41 structure, TSI bright blue #4396F6 highlights, tiny green progress details, restrained orange exception accent. Premium, subtle, executive, clean negative space, suitable for a deck proof slide or web section. Leave upper-left logo-safe space. No logos, no fake client/account/patient data, no watermarks, no aggressive debt imagery.",
+  "generation_mode": "built-in Codex image generation",
+  "source_path": "/Users/connorlaughlin/.codex/generated_images/019e8e4d-59a1-75e1-9b90-7d506af6e7c6/ig_0428551b734e4f0c016a20639d9284819b9461393895dc39f9.png",
+  "review_status": "directional-example",
+  "notes": "Proof-point visual lane; use final verified metrics outside the generated image.",
+  "package_asset_policy": "full-resolution PNG omitted from compact package; use bundled WebP preview for visual reference and regenerate from prompt metadata for production use.",
+  "preview_path": "previews/tsi-v2-09-light-data-monument-preview.webp",
+  "source_png_not_bundled": true
+}

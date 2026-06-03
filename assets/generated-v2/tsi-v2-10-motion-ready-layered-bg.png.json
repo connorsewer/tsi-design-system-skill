@@ -1,0 +1,13 @@
+{
+  "id": "tsi-v2-10",
+  "title": "Motion-ready layered background",
+  "file": "tsi-v2-10-motion-ready-layered-bg.png",
+  "prompt": "Create a 16:9 motion-ready layered background for TSI 2.0. Light premium base with separate-feeling foreground, midground, and background layers: soft white, cool blue tint, TSI dark blue #001E41 hairline grids, TSI bright blue #4396F6 signal arcs, and subtle warm-neutral depth. Abstract, elegant, spacious, designed so UI or text can animate over it. No readable text, no logos, no data, no people, no watermarks. Leave upper-left logo-safe space and broad copy-safe area. Premium OpenAI-inspired subtle gradient atmosphere but brand-derived and restrained.",
+  "generation_mode": "built-in Codex image generation",
+  "source_path": "/Users/connorlaughlin/.codex/generated_images/019e8e4d-59a1-75e1-9b90-7d506af6e7c6/ig_0428551b734e4f0c016a206400ef80819b8ef34556e597e42e.png",
+  "review_status": "directional-example",
+  "notes": "Subtle atmospheric layer for animated HTML or product visuals.",
+  "package_asset_policy": "full-resolution PNG omitted from compact package; use bundled WebP preview for visual reference and regenerate from prompt metadata for production use.",
+  "preview_path": "previews/tsi-v2-10-motion-ready-layered-bg-preview.webp",
+  "source_png_not_bundled": true
+}

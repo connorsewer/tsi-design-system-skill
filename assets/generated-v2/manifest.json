@@ -1,0 +1,47 @@
+{
+  "library": "TSI Design System 2.0 directional generated assets",
+  "date": "2026-06-03",
+  "generation_mode": "built-in Codex image generation",
+  "source_directory": "/Users/connorlaughlin/.codex/generated_images/019e8e4d-59a1-75e1-9b90-7d506af6e7c6",
+  "usage_note": "Directional taste-calibration examples only. Compact package includes WebP previews plus JSON prompt metadata; regenerate production-resolution images from prompts when needed. Place official logos afterward.",
+  "assets": [
+    "tsi-v2-01-light-revenue-recovery-hero.png",
+    "tsi-v2-02-warm-compliance-care.png",
+    "tsi-v2-03-light-operating-layer.png",
+    "tsi-v2-04-borrower-servicing-journey.png",
+    "tsi-v2-05-healthcare-rcm-flow.png",
+    "tsi-v2-06-cxbpo-quality-routing.png",
+    "tsi-v2-07-relationship-preservation.png",
+    "tsi-v2-08-compliant-outreach-spot.png",
+    "tsi-v2-09-light-data-monument.png",
+    "tsi-v2-10-motion-ready-layered-bg.png"
+  ],
+  "full_resolution_assets_not_bundled": true,
+  "full_resolution_backup_created": "/Users/connorlaughlin/Desktop/TSI Images/dist/tsi-design-system-2.0-full-generated-v2-png-backup",
+  "preview_directory": "previews",
+  "contact_sheet": "generated-v2-preview-contact-sheet.webp",
+  "source_png_assets": [
+    "tsi-v2-01-light-revenue-recovery-hero.png",
+    "tsi-v2-02-warm-compliance-care.png",
+    "tsi-v2-03-light-operating-layer.png",
+    "tsi-v2-04-borrower-servicing-journey.png",
+    "tsi-v2-05-healthcare-rcm-flow.png",
+    "tsi-v2-06-cxbpo-quality-routing.png",
+    "tsi-v2-07-relationship-preservation.png",
+    "tsi-v2-08-compliant-outreach-spot.png",
+    "tsi-v2-09-light-data-monument.png",
+    "tsi-v2-10-motion-ready-layered-bg.png"
+  ],
+  "preview_assets": [
+    "tsi-v2-01-light-revenue-recovery-hero-preview.webp",
+    "tsi-v2-02-warm-compliance-care-preview.webp",
+    "tsi-v2-03-light-operating-layer-preview.webp",
+    "tsi-v2-04-borrower-servicing-journey-preview.webp",
+    "tsi-v2-05-healthcare-rcm-flow-preview.webp",
+    "tsi-v2-06-cxbpo-quality-routing-preview.webp",
+    "tsi-v2-07-relationship-preservation-preview.webp",
+    "tsi-v2-08-compliant-outreach-spot-preview.webp",
+    "tsi-v2-09-light-data-monument-preview.webp",
+    "tsi-v2-10-motion-ready-layered-bg-preview.webp"
+  ]
+}

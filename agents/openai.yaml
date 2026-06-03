@@ -1,0 +1,7 @@
+interface:
+  display_name: "TSI Design System"
+  short_description: "Create premium TSI brand work"
+  brand_color: "#001E41"
+  default_prompt: "Use $tsi-design-system to create a light-premium TSI landing page, deck, product visual, or generated-asset prompt set."
+policy:
+  allow_implicit_invocation: true
