@@ -26,6 +26,7 @@ If you are about to write any of these, stop and rebuild that element with the f
 10. **Marketing buzzword copy.** streamline / empower / supercharge / leverage / unleash / seamless / world-class / best-in-class / next-generation / mission-critical. *Fix:* name the specific noun and the verb of what TSI literally does (recover, service, route, validate, resolve).
 11. **Em dashes and AI cadence.** No `—` or `--`; no "serious statement, then punchy negation" rhythm repeated down the page. *Fix:* commas, colons, periods; specific sentences, not aphorisms.
 12. **Centered everything at VARIANCE > 4.** *Fix:* split-screen, left-content/right-artifact, asymmetric whitespace, or pinned structure. Centered is allowed only for a manifesto/announcement where the line IS the design.
+13. **Distorted logo (absolute, never).** A stretched, squashed, cropped, or skewed brand mark — `object-fit: cover/fill`, `width:100%`+`height:100%`, non-uniform `scale(x,y)`, or two mismatched fixed dimensions on a logo/symbol/sub-brand lockup. *Fix:* lock the ratio — set one dimension, other `auto`; or `object-fit: contain`. Run `scripts/check_logo_integrity.py`. This one never has an exception.
 
 ## Contrast and shape locks (a11y, mandatory)
 
@@ -56,3 +57,4 @@ Block delivery until all pass. If any fails, fix and re-check; do not ship with 
 9. Compliance: synthetic data only, no shame/panic/threat, claims supportable or clearly illustrative, review caveats flagged?
 10. The AI slop test: if a stranger saw this, would they say "AI made that" without doubt? If yes, it failed.
 11. Portable if shared: a deliverable the user will send has every local asset embedded (data URIs via `scripts/inline_assets.py`), zero `../assets/...` paths remaining, and renders standalone. In-repo examples are exempt.
+12. Logo integrity (absolute): every brand mark keeps its true aspect ratio — no stretch, squash, crop, or skew. `scripts/check_logo_integrity.py` returns zero FAILs. Never an exception.

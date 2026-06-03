@@ -46,7 +46,7 @@ python3 scripts/validate_package.py .
 | `assets/official/` | Official logos, symbols, sub-brand marks, people illustrations, portraits. |
 | `assets/generated-v2/` | Directional generated-asset previews + prompt sidecars. |
 | `examples/` | Single-file HTML examples — each a different design read. |
-| `scripts/` | `validate_package.py`, `overlay_tsi_logo.py` (deterministic logo compositing). |
+| `scripts/` | `validate_package.py` (package checks), `overlay_tsi_logo.py` (deterministic logo compositing), `inline_assets.py` (embed assets for portable shared files), `check_logo_integrity.py` (audit logo aspect-ratio before delivery). |
 | `uploads/` | Source brand guide PDF, PowerPoint template, extracted brand text. |
 | `evals/` | Evaluation prompts for regression and taste testing. |
 

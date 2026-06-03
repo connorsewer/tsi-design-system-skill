@@ -7,7 +7,7 @@ Run this before delivering TSI 2.0 work.
 ## Brand
 
 - Official logo variant matches the background.
-- Logo aspect ratio and clear space are preserved.
+- Logo aspect ratio is locked and clear space preserved — never stretched, squashed, cropped, or skewed (absolute). `scripts/check_logo_integrity.py <file.html>` returns zero FAILs.
 - TSI blue and Poppins are visible identity anchors.
 - Warm neutrals or gradients support the brand rather than replacing it.
 - Current tagline is used only where a tagline belongs.

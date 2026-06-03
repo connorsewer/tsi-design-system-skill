@@ -11,3 +11,5 @@ For HTML, write single-file deliverables with inline CSS. Do not rely on an exte
 For decks, use `uploads/TSI_PPT_Widescreen_Poppins.pptx` as the PowerPoint starting point when creating `.pptx` deliverables. For HTML decks, borrow its brand rhythm and use official logos from `assets/official/`.
 
 For image generation, never ask the model to create TSI logos or sensitive data. Generate supporting visual assets, then place official logos afterward.
+
+**Logo aspect ratio is locked, always, no matter what.** Never stretch, squash, crop, or skew an official logo or brand mark. Set one dimension and let the other compute (`height: 32px; width: auto;`), or use `object-fit: contain`; never `cover`/`fill`/`width:100%`+`height:100%` or a non-uniform `scale()`. Audit before delivery with `python3 scripts/check_logo_integrity.py <file.html>` (must return zero FAILs). See `references/logo-and-assets.md`.

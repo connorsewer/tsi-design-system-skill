@@ -19,19 +19,38 @@ Use assets from `assets/official/`:
 
 Use `uploads/TSI_BrandIdentityGuide_FINAL_022123.pdf` for original brand provenance and `uploads/brand_guide_text.txt` for searchable text. Use `uploads/TSI_PPT_Widescreen_Poppins.pptx` as the PowerPoint starting point for `.pptx` decks.
 
+## Logo Integrity (Absolute Rule)
+
+Every official logo, symbol, sub-brand lockup, and brand mark keeps its **true aspect ratio at all times**. It is **never stretched, squashed, cropped, skewed, rotated, or otherwise distorted** — on any surface, at any size, in any deliverable, no matter what. This rule does not bend for layout convenience.
+
+**Safe sizing (do this):**
+
+- Constrain ONE dimension, let the other compute: `height: 32px; width: auto;` (or set width, height auto). This guarantees the ratio.
+- If a mark must fit inside a fixed box, use `object-fit: contain` and accept the letterboxing. The mark stays whole.
+- Give the mark a `min-height` floor for legibility (sub-brand lockups ~ a 32px floor); scale down only proportionally.
+- Preserve clear space. Do not crowd the mark with text, UI chrome, or borders.
+
+**Distortion (never do this):**
+
+- `width: 100%` + `height: 100%` on a mark, or any pairing of two fixed dimensions that does not match the asset's native ratio.
+- `object-fit: cover`, `object-fit: fill`, or `background-size: 100% 100% / cover` on a logo.
+- Non-uniform transforms: `transform: scale(1.4, 0.8)`, single-axis `scaleX()/scaleY()`, or `skew`.
+- Cropping the mark with a tight container + `overflow: hidden`, masking, blur, glow, recolor, or drop shadows.
+
+**Enforce it.** Before delivering any HTML, run `python3 scripts/check_logo_integrity.py <file.html>`. It flags fills, covers, non-uniform scales, dual-pinned dimensions, and logo-selector `object-fit` distortions. Fix every FAIL before shipping.
+
 ## Logo Placement
 
 - Light backgrounds: use `logo-primary-on-white.png` or RGB sub-brand assets.
 - Dark blue backgrounds: use `logo-primary-white.png` or white sub-brand assets.
 - Bright blue backgrounds: use `logo-primary-on-brightblue.png` where appropriate.
-- Preserve aspect ratio. Set one dimension and let the other auto.
 - Preserve clear space. Do not crowd the mark with UI chrome, text, or borders.
 
 Never:
 
 - Recreate or trace the logo.
 - Ask an image model to generate the logo.
-- Distort, recolor, blur, glow, rotate, crop, mask, or add shadows to the logo.
+- Distort, recolor, blur, glow, rotate, crop, mask, or add shadows to the logo (see Logo Integrity above).
 - Place an on-white logo on a dark background or a white logo on a light background.
 
 ## People And Portraits

@@ -12,7 +12,8 @@ Use these instructions for any work inside this package or for TSI-branded outpu
 
 ## Hard Rails
 
-- Preserve official logo artwork. Do not redraw, recolor, distort, glow, blur, crop, or generate TSI logos.
+- Preserve official logo artwork. Do not redraw, recolor, glow, blur, crop, or generate TSI logos.
+- **Logo aspect ratio is locked, always, no matter what.** Never stretch, squash, crop, or skew a brand mark. Set one dimension with the other `auto`, or `object-fit: contain`; never `cover`/`fill`/`width:100%`+`height:100%` or non-uniform `scale()`. Audit with `python3 scripts/check_logo_integrity.py <file.html>` (zero FAILs required).
 - Do not generate fake client, account, patient, borrower, payment, legal, or collection records.
 - Keep TSI blue and Poppins as identity anchors even when using warm neutrals, gradients, dark panels, or generated imagery.
 - Use synthetic illustrative data only.
@@ -22,9 +23,10 @@ Use these instructions for any work inside this package or for TSI-branded outpu
 
 - Put project CSS inline inside the HTML file.
 - Inline small JS when needed for motion or interaction.
-- Use relative paths for package assets.
+- For anything the user will share, embed local assets as data URIs with `scripts/inline_assets.py` so the file renders standalone. Relative `../assets/...` paths are only for the in-repo `examples/`.
 - Google Fonts links are allowed with strong local fallbacks.
 - Include `prefers-reduced-motion` handling for animated examples.
+- Audit logo integrity with `scripts/check_logo_integrity.py` before delivery (zero FAILs).
 
 ## Model And Evaluation Policy
 
