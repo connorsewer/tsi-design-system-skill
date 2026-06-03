@@ -55,3 +55,4 @@ Block delivery until all pass. If any fails, fix and re-check; do not ship with 
 8. Copy: no buzzwords, no em dashes, no aphoristic cadence, no duplicate-intent CTAs?
 9. Compliance: synthetic data only, no shame/panic/threat, claims supportable or clearly illustrative, review caveats flagged?
 10. The AI slop test: if a stranger saw this, would they say "AI made that" without doubt? If yes, it failed.
+11. Portable if shared: a deliverable the user will send has every local asset embedded (data URIs via `scripts/inline_assets.py`), zero `../assets/...` paths remaining, and renders standalone. In-repo examples are exempt.

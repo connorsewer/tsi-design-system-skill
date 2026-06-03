@@ -42,7 +42,7 @@ Run this before delivering TSI 2.0 work.
 
 - Official assets are not distorted, recolored, or regenerated.
 - Generated images include metadata sidecars.
-- HTML examples use relative package asset paths.
+- In-repo HTML examples use relative package asset paths; **shareable deliverables embed assets** as data URIs (`scripts/inline_assets.py`) so they render standalone with zero `../assets/...` paths.
 - The package includes the PowerPoint template and Brand Identity Guide PDF.
 
 ## Delivery Note

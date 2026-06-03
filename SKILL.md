@@ -26,7 +26,7 @@ Produce premium, unmistakably-TSI work that does not collapse into generic B2B S
    - `references/surface-contracts.md` — per-surface structure for pages, decks, product visuals, dashboards, social, prompt books.
    - `references/qa-rubric.md` — run the pre-flight before delivery.
 5. Use official assets from `assets/official/`. Use `uploads/` PDF + PPTX as provenance and deck starting points.
-6. HTML deliverables: single-file, inline CSS, relative asset paths, Google Fonts with fallbacks.
+6. HTML deliverables: single-file, inline CSS, Google Fonts with fallbacks. **If the user will share the file, make it portable** (Section 2 below). In-repo `examples/` may keep `../assets/...` relative paths; standalone deliverables must not.
 
 ## 0. Design Read (before anything)
 
@@ -63,6 +63,20 @@ Set after the Design Read. TSI is a regulated B2B operating-infrastructure brand
 
 Override conversationally when the brief calls for it; do not ask the user to edit this file. "Anchored, can flex" means: go to 7 variance or 6 motion when the brief earns it; do not exceed the range for a regulated surface.
 
+## 2. Portable delivery (embed assets in shared files)
+
+A `.html` (or any single-file artifact) that points at `../assets/...` only renders next to this package. The moment the user emails it, drops it in Slack, or uploads it, the logo and images break and the recipient sees broken-image boxes. So **any deliverable the user will share must be self-contained**: every local asset embedded as a base64 data URI, no dependency on an asset folder.
+
+- Always embed the official **logo, symbols, sub-brand marks, and icons** (they are small). Embed photographic/people images too for shareable files.
+- Do not hand-write base64. Run the bundled helper so it is deterministic and correct:
+  ```bash
+  python3 scripts/inline_assets.py path/to/deliverable.html        # writes deliverable.portable.html
+  python3 scripts/inline_assets.py path/to/deliverable.html --in-place
+  ```
+  It rewrites `img src`, `poster`, and CSS `url(...)` references to data URIs, leaves Google Fonts and other remote URLs alone, errors if a referenced asset is missing, and warns on large embeds.
+- After embedding, the file should have zero local `../` asset paths. Verify before sending.
+- The only place relative `../assets/...` paths are acceptable is the bundled `examples/` that ship inside this package. Everything you hand the user to share gets embedded.
+
 ## Core rules (brand anchors — fixed)
 
 - **Light premium is the default mode, not the only mode.** Dark-feature, warm-editorial, and product-system modes are first-class. Pick per the Design Read; do not make every premium output a dark command center *or* the same light template.
@@ -90,5 +104,5 @@ Override conversationally when the brief calls for it; do not ask the user to ed
 - `assets/reference/adventurous-visual-system-contact-sheet.png` — atmospheric lane reference.
 - `uploads/` — brand guide PDF, PPTX template, extracted brand text.
 - `examples/` — single-file HTML examples (each a *different* design read; study them for range, do not clone one).
-- `scripts/validate_package.py` — package/artifact validation. `scripts/overlay_tsi_logo.py` — deterministic logo compositing.
+- `scripts/validate_package.py` — package/artifact validation. `scripts/overlay_tsi_logo.py` — deterministic logo compositing. `scripts/inline_assets.py` — embed local assets as data URIs so a shared HTML file renders anywhere (Section 2).
 - `evals/evals.json` — evaluation prompts for regression and taste testing.
